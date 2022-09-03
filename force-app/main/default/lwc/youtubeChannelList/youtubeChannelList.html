@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Channel List">
+        <template if:true={isChannelListDisplayed}>
+            <template for:each={channelListRecords} for:item="channelListRecord">
+                <div class="slds-var-p-around_x-small" data-item={channelListRecord.channelid} key={channelListRecord.channelid} onclick={handleChannelClick}>
+                    <div class="slds-var-p-around_small playlist-tile-bg">
+                        <div class="demo-only" style="width:30rem">
+                            <article class="slds-tile slds-media">
+                              <div class="slds-media__figure">
+                                <lightning-avatar slot="media" src={channelListRecord.thumbnail_default} fallback-icon-name="standard:person_account" alternative-text={channelListRecord.title}></lightning-avatar>
+                              </div>
+                              <div class="slds-media__body">
+                                <h3 class="slds-tile__tile slds-truncate" title={channelListRecord.title}>
+                                    <a>{channelListRecord.title}</a>
+                                  </h3>
+                                <div class="slds-tile__detail">
+                                  <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Description">{channelListRecord.description}</dt>
+                                  </dl>
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

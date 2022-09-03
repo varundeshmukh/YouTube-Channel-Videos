@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Latest Videos">
+        <template if:true={isPlaylistDisplayed}>
+            <div class="c-container">
+                <lightning-layout vertical-align="stretch" multiple-rows="true" class="x-large">
+                    <template for:each={playlistRecordsReceived} for:item="playlistRecord">
+                        <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box" key={playlistRecord.videoid}>
+                            <iframe width="auto" height="auto" src={playlistRecord.videosrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="YouTube Channel Search">
+        <div class="slds-var-p-around_small">
+            <lightning-input type="text" placeholder="Enter Channel Name" onchange={handleChannelNameChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_small slds-align_absolute-center">
+            <lightning-button variant="brand-outline" label="Search" alternative-text="Search" onclick={handleSearch}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
