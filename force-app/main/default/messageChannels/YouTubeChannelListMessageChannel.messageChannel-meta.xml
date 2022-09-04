@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This message channels from the channel list.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>These are channel list to be displayed</description>
+        <fieldName>channelListRecords</fieldName>
+    </lightningMessageFields>
+    <masterLabel>YouTubeChannelListMessageChannel</masterLabel>
+</LightningMessageChannel>
