@@ -1,5 +1,5 @@
 public with sharing class YoutubeChannelApiController {
-    public static final String G_API_KEY = 'AIzaSyAKRznplBWo7VBg-YdswMIqQ6Bj8jPx8BE';
+    public static final String G_API_KEY = '<YOUR_GOOGLE_API_KEY>';
     @AuraEnabled
     public static string channelSearch(String searchKey){
         try {
